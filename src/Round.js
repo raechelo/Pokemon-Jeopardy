@@ -6,8 +6,8 @@ class Round {
     this.catIds = [];
     this.clues = [];
     this.pointValues = [];
-    this.questions = [];
-    this.dailyDouble = 1;
+    this.questionsAsked = [];
+    this.dailyDouble = false;
   }
 
   startRound(game) {

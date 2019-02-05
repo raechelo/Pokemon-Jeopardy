@@ -54,7 +54,7 @@ let game = new GameBoard();
 
 // * ======= Functions ======= *
 
-let game;
+// let game;
 
 $(".start--button").click(function (e) {
   e.preventDefault();
@@ -69,19 +69,18 @@ $('h2').click(domUpdates.toggleOverlay());
   $('.overlay').toggle();
   $('.start-container').toggle();
   $('.popup').toggle();
-});
 
 $('.col').click(function () {
   $('.overlay').toggle();
   $(".question-container").css('visibility', 'visible');
   $('.popup').toggle();
 });
+
 $('.col').click(function (e) {
   console.log('tile id ', event.target.id);
   let tileId = event.target.id;
   domUpdates.showQuestion(game, tileId);
   // $(e.target).css('visibility', 'hidden');
-
 });
 
 $('.popup-btn').click(function (e) {
@@ -89,4 +88,4 @@ $('.popup-btn').click(function (e) {
   $('.overlay').toggle();
   $(".question-container").css('visibility', 'visible');
   $('.popup').toggle();
-})
+});

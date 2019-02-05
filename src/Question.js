@@ -1,9 +1,9 @@
 class Question {
-  constructor(question, answer, category, categoryID, point, currIndex) {
+  constructor(question, answer, category, categoryId, point, currIndex) {
     this.question = question;
     this.answer = answer;
     this.category = category;
-    this.categoryID = categoryID;
+    this.categoryId = categoryId;
     this.point = point;
     this.currIndex = {};
   }
