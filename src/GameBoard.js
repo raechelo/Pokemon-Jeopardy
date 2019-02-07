@@ -29,13 +29,6 @@ class Gameboard {
     console.log(this.activePlayer)
   }
 
-  hidePopup() {
-    $(".start--button").click(function() {
-      $(".overlay").toggle();
-      $('.start-up').toggle();
-    });
-  }
-
   startGame(playerIn) {
     const gameArr = this.shuffle(Object.values(data.categories));
     // domUpdates.displayNames();

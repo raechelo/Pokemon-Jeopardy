@@ -2,7 +2,7 @@ import data from './data';
 import domUpdates from './domUpdates';
 
 class Round {
-  constructor(players, activeRound, activePlayer, cluesRemaining, clues, catNames) {
+  constructor(catNames, catIds, clues, pointValues) {
     this.catNames = [];
     this.catIds = [];
     this.clues = [];

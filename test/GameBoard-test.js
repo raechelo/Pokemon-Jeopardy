@@ -27,9 +27,9 @@ describe('Gameboard', function() {
 
   it('should change rounds when clues remaining reaches 0', () => {
     const gameboard = new Gameboard();
-    expect(gameboard.activeRound).to.equal(1)
+    expect(gameboard.activeRound).to.equal(0)
     gameboard.changeRound();
-    expect(gameboard.activeRound).to.equal(2)
+    expect(gameboard.activeRound).to.equal(16)
   });
 
   it('should have three players', function() { 
@@ -40,14 +40,15 @@ describe('Gameboard', function() {
 
   it('should change players when their turn is over', () => {
     const gameboard = new Gameboard();
-    expect(gameboard.activePlayer).to.equal(1);
+    expect(gameboard.playerIndex).to.equal(0);
     gameboard.changeTurn();
-    expect(gameboard.activePlayer).to.equal(2);
+    expect(gameboard.playerIndex).to.equal(1);
   })
 
   it('should have an array of categories', () => {
     const gameboard = new Gameboard();
-    expect(gameboard.catNames).to.deep.equal(4);
+    gameboard.startGame();
+    expect(gameboard.catIds).to.equal(4);
   });
 
 });

@@ -16,20 +16,17 @@ describe('Round', function() {
     expect(round.catIds).to.deep.equal([]);
     expect(round.clues).to.deep.equal([]);
     expect(round.pointValues).to.deep.equal([]);
-    expect(round.questions).to.deep.equal([]);
-    expect(round.dailyDouble).to.equal(1);
   });
 
   it('should have 16 questions', () => {
     const round = new Round();
     round.startRound();
-    console.log(round.clues.length)
-    expect(round.clues.length).to.equal(15);
+    expect(round.clues.length).to.equal(6);
   })
 
   it('should have one Daily Double for Round 1', function() {
     const round = new Round();
-    expect(round.dailyDouble).to.equal(1)
+    expect(round.clue.dailyDouble).to.equal(true)
   });
 
   it('should have two daily doubles for round 2', () => {

@@ -67,6 +67,7 @@ export default {
   wrongAns() {
     $('.question-result').text('NICE TRY!');
   },
+  
   updateScore(game) {
     game.players.forEach((player, ind) => {
       $(`#player-${ind}-hp`).text(player.score)
